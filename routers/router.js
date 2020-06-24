@@ -13,7 +13,7 @@ const sharp = require('sharp')
 const AddService = require('../models/addService')
 const Bookings = require('../models/booknow')
 
-mongoose.connect(key.mongodbUrl, 
+mongoose.connect(process.env.MONGOURL, 
     {useCreateIndex : true, 
     useNewUrlParser : true ,
     useUnifiedTopology: true
