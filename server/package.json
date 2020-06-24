@@ -7,6 +7,7 @@
   "scripts": {
     "build" : "cd client/ceyumo && npm run build",
     "install-client": "cd client/ceyumo && npm install",
+    "heroku-postbuild" : "npm run install-client && npm run build",
     "start": "node app.js",
     "client" : "cd client/ceyumo && npm start",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
