@@ -56,6 +56,7 @@ const LoginForm = props =>{
                 }
             })
             const vendotData = await vendorLogin.json()
+            console.log(vendotData)
             isLogin(true)
             if(!vendotData.error){
                 setLoading(false)
