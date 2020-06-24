@@ -29,28 +29,6 @@ class VendorPanel extends React.Component {
         //this.fetchVendor()
     }
 
-    // fetchVendor = async()=>{
-    //     // console.log(token)
-    //     const vendorRes = await fetch('/vendors',{
-    //         method:'get',
-    //         headers : {
-    //             'Content-Type' : 'application/json',
-    //             'Authorization' : `Bearer ${this.state.token}`
-    //         }
-    //     })
-    //     const vendorObj = await vendorRes.json()
-        
-    //     if(!vendorObj.error){
-    //         this.setState({
-    //             ...this.state,
-    //             vendor : [...this.state.vendor, vendorObj]
-    //         })
-    //     }
-
-    //     console.log(this.state.vendor[0],this.state.token)
-    //     sessionStorage.setItem('vendor',JSON.stringify(this.state.vendor[0]))
-    // }
-
     componentDidMount(){
         return this.getToken()
     }

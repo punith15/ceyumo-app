@@ -14,10 +14,12 @@ const Dashboard = ()=>{
             method : 'get',
             headers : {
                 'Content-Type' : 'application/json',
+                'Accept': 'application/json',
                 'Authorization' : `Bearer ${token}`
             }
         })
         const bookingObj = await bookingRes.json()
+        console.log(bookingObj)
         if(bookingObj){
             setPending(bookingObj.pending)
             setInprogress(bookingObj.inprogress)
