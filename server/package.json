@@ -5,7 +5,10 @@
   "main": "app.js",
   "Access-Control-Allow-Origin": "http://localhost:3000",
   "scripts": {
+    "build" : "cd client/ceyumo && npm run build",
+    "install-client": "cd client/ceyumo && npm install",
     "start": "node app.js",
+    "client" : "cd client/ceyumo && npm start",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
   },
   "author": "",
