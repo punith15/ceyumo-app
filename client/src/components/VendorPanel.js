@@ -18,7 +18,7 @@ class VendorPanel extends React.Component {
     }
 
     getToken = async()=>{
-        const vendortoken = await localStorage.getItem('vendorToken')
+        const vendortoken = await sessionStorage.getItem('vendorToken')
         const tokenValid = vendortoken !== null
         console.log(tokenValid)
         this.setState({
@@ -58,7 +58,7 @@ class VendorPanel extends React.Component {
     render(){
         return(
             <div>
-                {this.state.login ? <SidebarNav vendor={this.state.name} token={this.state.token} /> : <Unauthorised401 user="vendor" />}
+                {this.state.login ? <SidebarNav token={this.state.token} /> : <Unauthorised401 user="vendor" />}
             </div>
         )
     }
