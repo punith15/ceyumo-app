@@ -6,20 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build" : "cd client/ceyumo && npm run build",
-    "install-client": "cd client/ceyumo && npm install",
-    "heroku-postbuild" : "npm run install-client && npm run build",
     "start": "node app.js",
     "client" : "cd client/ceyumo && npm start",
+    "install-client": "cd client/ceyumo && npm install",
+    "heroku-postbuild" : "npm run install-client && npm run build",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/punith15/ceyumo-app.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/punith15/ceyumo-app/issues"
-  },
-  "homepage": "https://github.com/punith15/ceyumo-app#readme"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.18",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "sharp": "^0.25.4",
+    "validator": "^13.0.0"
+  }
 }
