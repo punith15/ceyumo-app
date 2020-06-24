@@ -14,7 +14,7 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-if(process.env.NODE_ENV === "production"){
+if(process.env.NODE_ENV){
     console.log("env : "+process.env.NODE_ENV)
     app.use(express.static('client/build'))
 
