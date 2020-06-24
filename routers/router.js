@@ -12,9 +12,9 @@ const multer = require('multer')
 const sharp = require('sharp')
 const AddService = require('../models/addService')
 const Bookings = require('../models/booknow')
-const MONGOURL = process.env.MONGOURL || key.mongodbUrl
+// const MONGOURL = process.env.MONGOURL || 
 
-mongoose.connect(MONGOURL, 
+mongoose.connect(key.mongodbUrl, 
     {useCreateIndex : true, 
     useNewUrlParser : true ,
     useUnifiedTopology: true
