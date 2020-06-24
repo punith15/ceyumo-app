@@ -16,6 +16,10 @@ app.use(express.urlencoded({
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static('client/ceyumo/build'))
+
+    app.get('*', (req,res)=>{
+        res.sendFile(path.join(__dirname, 'client/ceyumo', 'build', 'index.html'))
+    })
 }
 
 app.use(require('./routers/router'))
