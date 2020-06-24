@@ -14,6 +14,10 @@ app.use(express.urlencoded({
     extended: true
 }))
 
+if(process.env.NODE_ENV == "production"){
+    app.use(express.static('client/ceyumo/build'))
+}
+
 app.use(require('./routers/router'))
 
 app.listen(port,()=>{
