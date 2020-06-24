@@ -1,0 +1,153 @@
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+
+.dashboard{
+    margin: 50px;
+}
+
+.dashboard-block1{
+    display: flex;
+}
+
+.chart1, .booking-list, .booking-count{
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chart1{
+    width: 500px;
+    height: 500px;
+}
+
+#myChart{
+    width: 100% !important;
+    height: 500px !important;
+}
+
+.booking-count-block{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-count, .add-service{
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+}
+
+.status{
+    height: 500px;
+    width: 100%;
+}
+
+.status .status-box, .add-service{
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.status-box{
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.dash-heading{
+    display: flex;
+    align-items: center ;
+    padding-bottom: 10px;
+}
+
+.dash-icon i{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    /*border-radius: 4px;
+    background: rgb(0, 91, 119);
+    color: wheat; */
+}
+
+.dash-heading h6{
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+.bookings-total{
+    color: rgb(58,196,125);
+}
+
+.bookings-today{
+    color: rgb(36, 103, 247);
+}
+
+.bookings-pending{
+    color: rgb(217,37,80);
+}
+
+.bookings-icon{
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bk-total, .bk-today, .bk-pending{
+    margin-left: auto;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+}
+
+.bk-total{
+    background: rgb(58,196,125);
+}
+
+.bk-today{
+    background: rgb(36, 103, 247);
+}
+
+.bk-pending{
+    background: rgb(217,37,80);
+}
+
+.modal-status{
+    margin-left: auto;
+}
+
+.modal-status h6{
+    background: green;
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+}
+
+.modal-status p{
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.add-service{
+    padding: 20px;
+}
+
+/* .pending{
+    color: red;
+}
+
+.inprogress{
+    color: orange;
+}
+
+.completed{
+    color: green;
+} */

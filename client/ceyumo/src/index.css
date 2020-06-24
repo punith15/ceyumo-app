@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+}
+
+.navbar-brand{
+  font-weight: bold;
+}
+
+ .navbar-brand,.nav-link, .dropdown-item, .nav-link i{
+  color: rgb(218, 65, 27);
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
+
+.dropdown-divider{
+  border-top: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.nav-link i{
+  margin: 0 5px;
+}
+
+.navbar-toggler-icon i{
+  color:rgb(218, 65, 27);
+  font-size:28px;
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 550px;
+  opacity: 0.4;
+}
+
+.image-overlay{
+  background:black;
+}
+
+.carousel-caption{
+  bottom: 0px;
+  top: 30%;
+}
+
+.carousel-header{
+  font-size: 4rem;
+}
+
+.get-started{
+  padding: 7px 30px;
+  background: rgb(218, 65, 27);
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+.event-image{
+  padding: 10px;
+  /* box-shadow: 0px 2px 8px rgba(0,0,0,0.26); */
+}
+
+.home-content{
+  height: 100%;
+}
+
+.home-content div img{
+  height: 350px;
+  width: 100%;
+}
+
+.home-block-1{
+  margin: auto 0;
+}
+
+.home-view .welcome {
+  position: relative; 	 
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.home-view .welcome::after{
+  content: '';
+  width: 5%;
+  height: 3px;
+  margin: 10px auto;
+  background: rgb(218, 65, 27);
+  display: block;
+}
+
+.marged{
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://zongo.io/blog/wp-content/uploads/2018/10/event-management-software.jpg');
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marged h1{
+  color: white;
+  text-align: center;
+}
+
+.marged button{
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  background: rgb(218, 65, 27);
+  color: white;
+}
+
+.our-services{
+  height: 300px;;
+}
+
+.slick-prev:before {
+  color: black;
+}
+.slick-next:before {
+  color: black;
+}
+
+.our-services-item, .cust-review-item{
+  background: ghostwhite;
+  height: 100%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.our-services-item img{
+  width: 100%;
+  height: 200px;
+}
+
+.our-services-item p{
+  margin-top: 10px;
+}
+
+.cust-review-item{
+  padding: 20px;
+}
+
+.cust-review-item>p{
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.cust-review-item img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.review-cust{
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+.review-cust-data{
+  display: flex;
+  margin-top: 20px;
+}
+
+.review-cust-data p{
+  margin: 0;
+  margin-left: 10px;
+}
+
+.review-cust-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-events{
+  display: flex;
+  flex-direction: column;
+  background: aliceblue;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin: 20px 0px;
+}
+
+.about-events h2, .about-events p{
+  text-align: center;
+}
+
+.whyus-block{
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyus-block .row{
+  margin: 20px;
+}
+
+.whyus-item{
+  height: 100%;
+  display: flex;
+}
+
+.whyus-item span i{
+  height: 50px;
+  width: 50px;
+  background: black;
+  border-radius: 50%;
+  margin: 0 10px;
+  color: white;
+  margin: 0 10px;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 173, 50);
+}
+
+.checked{
+  color: rgb(255, 173, 50);
+}
+
+.review span i, .review-cust span i{
+  margin: 0 6px;
+}
+
+.page-footer{
+  margin-top: 40px;
+  background: rgb(30, 28, 36);
+  color: white;
+}
+
+.page-footer a{
+  color: white;
+}
+
+.footer-copyright{
+  color: rgba(95, 95, 95, 0.5);
+  background: rgb(17, 17, 19);
+}
+
+.deep-purple{
+  background: darkslateblue;
+}
+
+.d-none{
+  display: block !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-header {
+    font-size: 2rem;
+  }
+  .carousel-item img{
+    height: 400px;
+  }
+  .carousel-caption{
+    top: 15%;
+  }
+  .home-content div img{
+    height: 250px;
+  }
+  .whyus-item{
+    height: auto;
+  }
+
+  .whyus-block{
+    height: 100%;
+  }
+}
