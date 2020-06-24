@@ -14,6 +14,8 @@ const AddService = require('../models/addService')
 const Bookings = require('../models/booknow')
 // const MONGOURL = process.env.MONGOURL || 
 
+console.log("key"+process.env.MONGOURL)
+
 mongoose.connect(key.mongodbUrl, 
     {useCreateIndex : true, 
     useNewUrlParser : true ,
