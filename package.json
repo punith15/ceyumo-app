@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "cd client/ceyumo && npm run build",
+    "build" : "cd client && npm run build",
     "start": "node app.js",
-    "client" : "cd client/ceyumo && npm start",
-    "install-client": "cd client/ceyumo && npm install",
+    "client" : "cd client && npm start",
+    "install-client": "cd client && npm install",
     "heroku-postbuild" : "npm run install-client && npm run build",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
   },
