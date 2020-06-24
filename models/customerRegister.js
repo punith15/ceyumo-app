@@ -55,6 +55,7 @@ const customerRegister = new mongoose.Schema({
 customerRegister.statics.findByCredentials = async (username, password)=>{
 
     const customer = await Customer.findOne({username})
+    console.log(customer)
     if(!customer){
         throw new Error('Unable to login !!!')
     }

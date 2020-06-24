@@ -12,9 +12,6 @@ const multer = require('multer')
 const sharp = require('sharp')
 const AddService = require('../models/addService')
 const Bookings = require('../models/booknow')
-// const MONGOURL = process.env.MONGOURL || 
-
-console.log("key"+process.env.MONGOURL)
 
 mongoose.connect(key.mongodbUrl, 
     {useCreateIndex : true, 
@@ -129,6 +126,7 @@ router.post('/register-vendor', async(req,res)=>{
 })
 
 router.post('/login-customer',async (req,res)=>{
+    console.log(req.body)
     try {
         const customer = await Customer.findByCredentials(req.body.username, req.body.password);
         const token = await customer.generateAuthToken()
@@ -136,6 +134,7 @@ router.post('/login-customer',async (req,res)=>{
         await customer.save()
         res.send({customer, token})
     } catch (error) {
+        console.log(error.message)
         res.status(404).send({error :error.message})
     }
 })

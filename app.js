@@ -14,6 +14,8 @@ app.use(express.urlencoded({
     extended: true
 }))
 
+// require('dotenv').config()
+
 if(process.env.NODE_ENV){
     console.log("env : "+process.env.NODE_ENV)
     app.use(express.static('client/build'))
