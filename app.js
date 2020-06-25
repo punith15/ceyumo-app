@@ -14,7 +14,7 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-// require('dotenv').config()
+require('dotenv').config()
 
 if(process.env.NODE_ENV){
     console.log("env : "+process.env.NODE_ENV)
