@@ -15,7 +15,7 @@ const BookNow = props=>{
     const [customerData, setCustomerData] = useState([])
     const [bookingObj, setBookingObj] = useState([])
     const [loading, setLoading] = useState(false)
-    const [message, setMessage] = useState([])
+    const [message, setMessage] = useState('')
 
     const fetchBooking = async()=>{
         const token = sessionStorage.getItem('customerToken')
@@ -30,12 +30,12 @@ const BookNow = props=>{
             }
         })
         setLoading(false)
-        console.log(bookingRes)
-        const books = await bookingRes.json()
-        if(!books.error){
-            setMessage(["Booking Successfull !!!", "alert alert-success alert-dismissible fade show"])
+        console.log(bookingRes.status)
+        //const books = await bookingRes.json()
+        if(bookingRes.status == 201){
+            setMessage("Booking Successfull !!!")
         }else{
-            setMessage(["Unable to Book, Try again !!!", "alert alert-danger alert-dismissible fade show"])
+            setMessage("Unable to Book, Try again !!!")
         }
         handleDateChange(new Date())
         setState('')
@@ -45,7 +45,6 @@ const BookNow = props=>{
         setZip('')
         setCustomerData([])
         setBookingObj([])
-        setMessage([])
     }
 
     const fetchDistricts = async ()=>{

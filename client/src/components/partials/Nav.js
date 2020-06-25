@@ -19,22 +19,16 @@ const Nav = ()=>{
                         HOME <span className="sr-only">(current)</span>
                     </Link>
                 </li>
-                <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    BOOK NOW
-                    </a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#">PHOTOGRAPHERS</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">EVENT MANAGERS</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">WEDDING PLANNER</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">CATERING SERVICES</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">TRAVELS</a>
-                    <div className="dropdown-divider"></div>
-                    </div>
+                <li className="nav-item">
+                    <Link className="nav-link" to='/services'>
+                        <span className="nav-book-now">BOOK NOW</span>
+                    </Link>
+                </li>
+
+                <li className="nav-item active">
+                    <Link className="nav-link" to='/loginform/vendor'>
+                        LIST BUSINESS
+                    </Link>
                 </li>
 
                 <li className="nav-item">

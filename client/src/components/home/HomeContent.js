@@ -1,6 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import OurServices from './OurServices'
 import AboutEvents from './AboutEvents'
+import StartListing from './StartListing'
 import CustomerSpeak from './CustomerSpeak'
 
 const HomeContent = ()=>{
@@ -23,11 +25,14 @@ const HomeContent = ()=>{
         </div>
         <div className="marged">
             <h1>Nerver Miss The Special Moments!</h1>
+            <Link to="/services">
             <button>BOOK NOW</button>
+            </Link>
         </div>
 
         <OurServices/>
         <AboutEvents/>
+        <StartListing/>
         <CustomerSpeak/>
         </>
     )

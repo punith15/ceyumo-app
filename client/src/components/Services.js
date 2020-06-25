@@ -2,6 +2,7 @@ import React from 'react'
 import SelectService from './vendorpannel/SelectService'
 import ServiceModel from './partials/ServicesModel'
 import ServiceNav from './partials/ServiceNav'
+import Unauthorised from './partials/Unauthorised401'
 import './Services.css'
 
 const listOfStates = ['Andaman and Nicobar Islands','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chandigarh',
@@ -18,12 +19,23 @@ class Services extends React.Component{
             state : '',
             city : '',
             districts : [],
-            service : []
+            service : [],
+            isLogin : false
         }
         this.onHandleServiceChange = this.onHandleServiceChange.bind(this)
         this.fetchDistricts = this.fetchDistricts.bind(this)
         this.onStateChange = this.onStateChange.bind(this)
         this.onCityChange = this.onCityChange.bind(this)
+    }
+
+    componentDidMount(){
+        const token = sessionStorage.getItem('customerToken') !== null
+        if(token){
+            this.setState(({
+                ...this.state,
+                isLogin : true
+            }))
+        }
     }
 
     fetchDistricts = async()=>{
@@ -81,6 +93,7 @@ class Services extends React.Component{
     render(){
         return(
             <div>
+                {this.state.isLogin ? <div>
                 <div className="service-nav">
                     <ServiceNav/>
                 </div>
@@ -120,6 +133,7 @@ class Services extends React.Component{
                         {/*  */}
                     </div>
                 </div>
+            </div> : <Unauthorised user="customer" /> }
             </div>
         )
     }
