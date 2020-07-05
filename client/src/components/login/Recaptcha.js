@@ -11,7 +11,7 @@ class Recaptcha extends Component {
             <div>
                 <form>
                 <ReCAPTCHA
-                    sitekey= {process.env.SITE_KEY}
+                    sitekey= {process.env.REACT_APP_SITE_KEY}
                     onChange={this.props.onCaptchaChange}
                 />
                 </form>
