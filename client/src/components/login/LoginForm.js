@@ -1,7 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
 import {Link, withRouter, Redirect} from 'react-router-dom'
+import FacebookLogin from './FacebookLogin'
 import Spinner from '../partials/Spinner'
 import Alert from '../partials/Alert'
+import Recaptcha from './Recaptcha'
 
 const LoginForm = props =>{
     const [username, setUsername] = useState('')
@@ -10,6 +12,7 @@ const LoginForm = props =>{
     const [message, setMessage] = useState([])
     const [loading, setLoading] = useState(false)
     const [redirect, setRedirect] = useState(false)
+    const [captcha, setCaptcha] = useState(false)
 
     // useEffect(()=>{
     //     localStorage.clear();
@@ -80,6 +83,10 @@ const LoginForm = props =>{
         setPassword(e.target.value)
     }
 
+    const onCaptchaChange = (e)=>{
+        setCaptcha(true)
+    }
+
     const onHandleSubmit = (e)=>{
         e.preventDefault();
         try {
@@ -90,9 +97,16 @@ const LoginForm = props =>{
         } catch (error) {
             console.log(error.message)
         }
-        setLoading(true)
-        setMessage([])
-        fetchData()
+        
+        if(captcha){
+            setLoading(true)
+            setMessage([])
+            fetchData()
+        }else{
+            isLogin(true)
+            setMessage(["Enter Captcha", "alert alert-success alert-dismissible fade show"])
+        }
+        
     }
 
     return(
@@ -103,8 +117,12 @@ const LoginForm = props =>{
             {loading ? <Spinner/> : ''}
             </div>
             {login ? <Alert message={message[0]} cls={message[1]} /> : ''}
+
             <div className="login-form-main col-md-5">
-            <h3>Login</h3>
+            <h3>LOGIN TO YOUR ACCOUNT</h3>
+            {/* {props.match.params.user === 'customer' ? 
+            <FacebookLogin/> : ''} */}
+
             <form onSubmit={onHandleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
@@ -116,6 +134,8 @@ const LoginForm = props =>{
                     <input type="password" className="form-control" id="password" 
                     onChange={onPasswordChange} required/>
                 </div>
+
+                <Recaptcha onCaptchaChange={onCaptchaChange} />
                 
                 {props.match.params.user === 'customer' ?
                     (

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from 'react-router-dom'
 
 const Footer = ()=>{
     return(
@@ -47,16 +48,16 @@ const Footer = ()=>{
                     <h6 className="text-uppercase font-weight-bold">Services</h6>
                     <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                     <p>
-                    <a href="#!">Photography</a>
+                    <a href="/services">Photography</a>
                     </p>
                     <p>
-                    <a href="#!">Event Management</a>
+                    <a href="/services">Event Management</a>
                     </p>
                     <p>
-                    <a href="#!">Wedding Planner</a>
+                    <a href="/services">Wedding Planner</a>
                     </p>
                     <p>
-                    <a href="#!">Catering Services</a>
+                    <a href="/services">Catering Services</a>
                     </p>
 
                 </div>
@@ -65,16 +66,16 @@ const Footer = ()=>{
                     <h6 className="text-uppercase font-weight-bold">Useful links</h6>
                     <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                     <p>
-                    <a href="#!">Your Account</a>
+                    <Link to="/login">Login</Link>
                     </p>
                     <p>
-                    <a href="#!">Become an Affiliate</a>
+                    <Link to="/loginform/vendor">List Business</Link>
                     </p>
                     <p>
-                    <a href="#!">Shipping Rates</a>
+                    <a href="/loginform/customer">Book Now</a>
                     </p>
                     <p>
-                    <a href="#!">Help</a>
+                    <a href="/services">Services</a>
                     </p>
 
                 </div>
@@ -97,7 +98,7 @@ const Footer = ()=>{
 
             </div>
             <div className="footer-copyright text-center py-3">© 2020 Copyright : 
-                <a href="#"> pkumar.com</a>
+                <a href="#"> punithkumar.com</a>
             </div>
 
             </footer>
